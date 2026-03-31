@@ -1,0 +1,57 @@
+
+/*全体の背景と文字設定*/
+/*gptアドバイス*/
+body{
+ background-color: #f5f7fa; /* 柔らかいグレー */
+ color: #222;
+ font-family: "Segoe UI",Arial, sans-serif;
+ line-height: 1.6;
+ margin: 5px;
+ padding: 10px;
+
+}
+
+h1{
+ background-color: aqua;
+ height: 50px;
+ width: 180px;
+}
+
+.subtitle span{
+  display: block;      /* ← これで縦に積む */
+  margin: 2px 0;
+}
+
+.hagemashi span{
+  display: block;      /* ← これで縦に積む */
+  margin: 2px 0;
+}
+
+.day{
+ line-height:0.5;
+}
+
+.jibunnote{
+ margin-bottom: 80px; /* 下に余白を追加 */
+}
+
+
+
+
+
+
+
+.movie-title{
+ font-size: 2em; /* h1と同じ大きさにする */
+ color: red;
+ background-color: yellow;
+ height:50px;
+ width: 250px;
+}
+
+img{
+ height: auto;
+ width: 250px;
+ margin: 10px;  /* 画像のまわりに少し余白 */
+}
+
