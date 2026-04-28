@@ -6,6 +6,7 @@
   --muted: #5a5f66;
   --line: #dddddf;
   --accent: #3d5a80;
+  --cursor-pencil: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text x='2' y='24' font-size='22'>✏️</text></svg>");
 }
 
 * {
@@ -18,6 +19,11 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.8;
+  cursor: var(--cursor-pencil) 2 24, auto;
+}
+
+section[id] {
+  scroll-margin-top: 90px;
 }
 
 section[id] {
@@ -27,6 +33,22 @@ section[id] {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -48px;
+  background: #111;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus-visible {
+  top: 12px;
 }
 
 .skip-link {
