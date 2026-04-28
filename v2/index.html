@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">コンテンツへスキップ</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#top" aria-label="株式会社サンプル ホーム">SAMPLE INC.</a>
@@ -27,11 +28,12 @@
   </header>
 
   <main id="top">
-    <section class="hero section-space">
+    <div id="main-content"></div>
+    <section class="hero section-space" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Business Innovation Partner</p>
-          <h1>信頼を積み重ね、<br>企業の未来を加速する。</h1>
+          <h1 id="hero-title">信頼を積み重ね、<br>企業の未来を加速する。</h1>
           <p>
             株式会社サンプルは、戦略立案から実行支援までを一貫して提供し、
             企業の持続的な成長をサポートします。
@@ -59,11 +61,11 @@
       </div>
     </section>
 
-    <section id="services" class="section-space section-alt">
+    <section id="services" class="section-space section-alt" aria-labelledby="services-title">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Services</p>
-          <h2>サービス紹介</h2>
+          <h2 id="services-title">サービス紹介</h2>
         </div>
         <div class="card-grid">
           <article class="card">
@@ -82,11 +84,11 @@
       </div>
     </section>
 
-    <section id="strengths" class="section-space">
+    <section id="strengths" class="section-space" aria-labelledby="strengths-title">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Strengths</p>
-          <h2>私たちの特徴・強み</h2>
+          <h2 id="strengths-title">私たちの特徴・強み</h2>
         </div>
         <div class="feature-grid">
           <article class="feature-item">
@@ -109,11 +111,11 @@
       </div>
     </section>
 
-    <section id="news" class="section-space section-alt">
+    <section id="news" class="section-space section-alt" aria-labelledby="news-title">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">News</p>
-          <h2>お知らせ</h2>
+          <h2 id="news-title">お知らせ</h2>
         </div>
         <div class="news-list" role="list">
           <article class="news-item" role="listitem">
@@ -132,11 +134,11 @@
       </div>
     </section>
 
-    <section id="company" class="section-space">
+    <section id="company" class="section-space" aria-labelledby="company-title">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Company</p>
-          <h2>会社概要</h2>
+          <h2 id="company-title">会社概要</h2>
         </div>
         <dl class="company-table">
           <div>
@@ -163,14 +165,17 @@
       </div>
     </section>
 
-    <section id="contact" class="section-space contact-section">
+    <section id="contact" class="section-space contact-section" aria-labelledby="contact-title">
       <div class="container contact-inner">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>お気軽にご相談ください</h2>
+          <h2 id="contact-title">お気軽にご相談ください</h2>
           <p>課題整理の段階からでも構いません。まずは無料相談をご利用ください。</p>
         </div>
-        <a class="btn btn-primary" href="#" aria-label="お問い合わせフォームへ">お問い合わせフォームへ</a>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:info@example.com" aria-label="メールでのお問い合わせ">お問い合わせフォームへ</a>
+          <a class="btn btn-secondary contact-youtube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTubeチャンネルを開く">YouTubeはこちら</a>
+        </div>
       </div>
     </section>
   </main>
