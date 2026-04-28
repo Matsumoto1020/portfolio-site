@@ -3,10 +3,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portfolio v2</title>
+  <title>株式会社サンプル | 未来をつくる企業サイト</title>
+  <meta name="description" content="株式会社サンプルの公式サイトです。サービス紹介、会社の強み、お知らせ、会社概要、お問い合わせをご案内します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>portfolio v2</h1>
-  <p>ここから新版を作っていきます。</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="株式会社サンプル ホーム">SAMPLE INC.</a>
+      <nav class="global-nav" aria-label="グローバルナビゲーション">
+        <ul>
+          <li><a href="#services">サービス</a></li>
+          <li><a href="#strengths">強み</a></li>
+          <li><a href="#news">お知らせ</a></li>
+          <li><a href="#company">会社概要</a></li>
+          <li><a class="nav-cta" href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-space">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Business Innovation Partner</p>
+          <h1>信頼を積み重ね、<br>企業の未来を加速する。</h1>
+          <p>
+            株式会社サンプルは、戦略立案から実行支援までを一貫して提供し、
+            企業の持続的な成長をサポートします。
+            シンプルかつ実行可能なアプローチで、確かな成果へ導きます。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">無料相談を申し込む</a>
+            <a class="btn btn-secondary" href="#services">サービスを見る</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-hidden="true">
+          <div class="metric-card">
+            <p class="metric-label">導入企業数</p>
+            <p class="metric-value">450+</p>
+          </div>
+          <div class="metric-card">
+            <p class="metric-label">プロジェクト継続率</p>
+            <p class="metric-value">96%</p>
+          </div>
+          <div class="metric-card">
+            <p class="metric-label">平均満足度</p>
+            <p class="metric-value">4.8 / 5</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section-space section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2>サービス紹介</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>経営コンサルティング</h3>
+            <p>課題分析から戦略設計、実行計画までを設計し、経営課題の解決を支援します。</p>
+          </article>
+          <article class="card">
+            <h3>DX推進支援</h3>
+            <p>業務プロセス最適化やデータ活用基盤の構築を通して、組織の生産性を高めます。</p>
+          </article>
+          <article class="card">
+            <h3>人材・組織開発</h3>
+            <p>評価制度設計や研修プログラムで、成長を継続できる組織づくりを後押しします。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="strengths" class="section-space">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Strengths</p>
+          <h2>私たちの特徴・強み</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-item">
+            <h3>業界横断の実績</h3>
+            <p>製造・小売・IT・医療など多様な業界で培った知見を、最適な形で提供します。</p>
+          </article>
+          <article class="feature-item">
+            <h3>実行まで伴走</h3>
+            <p>提案だけで終わらず、現場での導入・定着まで伴走し、成果創出を支援します。</p>
+          </article>
+          <article class="feature-item">
+            <h3>データドリブンな判断</h3>
+            <p>感覚に頼らない意思決定の仕組みをつくり、再現性の高い改善を実現します。</p>
+          </article>
+          <article class="feature-item">
+            <h3>スピーディな対応</h3>
+            <p>小規模な検証を重ね、変化の速い市場環境にも迅速に対応できる体制を整えます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section-space section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">News</p>
+          <h2>お知らせ</h2>
+        </div>
+        <div class="news-list" role="list">
+          <article class="news-item" role="listitem">
+            <time datetime="2026-04-15">2026.04.15</time>
+            <p>ゴールデンウィーク期間中の営業日についてのお知らせを掲載しました。</p>
+          </article>
+          <article class="news-item" role="listitem">
+            <time datetime="2026-03-28">2026.03.28</time>
+            <p>サービスページを更新し、DX推進支援の導入事例を追加しました。</p>
+          </article>
+          <article class="news-item" role="listitem">
+            <time datetime="2026-03-01">2026.03.01</time>
+            <p>コーポレートサイトをリニューアルし、企業情報を拡充しました。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="company" class="section-space">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Company</p>
+          <h2>会社概要</h2>
+        </div>
+        <dl class="company-table">
+          <div>
+            <dt>会社名</dt>
+            <dd>株式会社サンプル</dd>
+          </div>
+          <div>
+            <dt>設立</dt>
+            <dd>2012年4月</dd>
+          </div>
+          <div>
+            <dt>所在地</dt>
+            <dd>東京都千代田区丸の内1-1-1 サンプルビル 8F</dd>
+          </div>
+          <div>
+            <dt>事業内容</dt>
+            <dd>経営コンサルティング、DX支援、組織開発支援</dd>
+          </div>
+          <div>
+            <dt>従業員数</dt>
+            <dd>120名（2026年4月時点）</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="contact" class="section-space contact-section">
+      <div class="container contact-inner">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>お気軽にご相談ください</h2>
+          <p>課題整理の段階からでも構いません。まずは無料相談をご利用ください。</p>
+        </div>
+        <a class="btn btn-primary" href="#" aria-label="お問い合わせフォームへ">お問い合わせフォームへ</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">SAMPLE INC.</p>
+      <p class="copyright">© 2026 SAMPLE INC. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
