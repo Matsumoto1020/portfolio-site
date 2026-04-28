@@ -6,7 +6,7 @@
   --muted: #5a5f66;
   --line: #dddddf;
   --accent: #3d5a80;
-  --cursor-pencil: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text x='2' y='24' font-size='22'>✏️</text></svg>");
+  --cursor-plane: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text x='1' y='24' font-size='21'>✈️</text></svg>");
 }
 
 * {
@@ -19,7 +19,7 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.8;
-  cursor: var(--cursor-pencil) 2 24, auto;
+  cursor: var(--cursor-plane) 4 22, auto;
 }
 
 section[id] {
@@ -420,5 +420,35 @@ a:focus-visible,
   * {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+
+.cursor-trail {
+  position: fixed;
+  width: 14px;
+  height: 4px;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 9999;
+  background: linear-gradient(90deg, rgba(61, 90, 128, 0.72), rgba(61, 90, 128, 0));
+  transform-origin: left center;
+  animation: vapor-fade 0.75s ease-out forwards;
+}
+
+@keyframes vapor-fade {
+  0% {
+    opacity: 0.8;
+    filter: blur(0.2px);
+  }
+
+  70% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleX(2.3);
+    filter: blur(1px);
   }
 }

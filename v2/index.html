@@ -186,5 +186,52 @@
       <p class="copyright">© 2026 SAMPLE INC. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const body = document.body;
+      if (!body) return;
+
+      let lastX = null;
+      let lastY = null;
+      const step = 10;
+
+      const createTrail = (x, y, angle) => {
+        const trail = document.createElement('span');
+        trail.className = 'cursor-trail';
+        trail.style.left = `${x}px`;
+        trail.style.top = `${y}px`;
+        trail.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+        body.appendChild(trail);
+        trail.addEventListener('animationend', () => trail.remove(), { once: true });
+      };
+
+      window.addEventListener('pointermove', (event) => {
+        const { clientX: x, clientY: y } = event;
+
+        if (lastX === null || lastY === null) {
+          lastX = x;
+          lastY = y;
+          return;
+        }
+
+        const dx = x - lastX;
+        const dy = y - lastY;
+        const distance = Math.hypot(dx, dy);
+        if (distance < step) return;
+
+        const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+        const count = Math.floor(distance / step);
+
+        for (let i = 1; i <= count; i++) {
+          const ratio = (i * step) / distance;
+          createTrail(lastX + dx * ratio, lastY + dy * ratio, angle);
+        }
+
+        lastX = x;
+        lastY = y;
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
